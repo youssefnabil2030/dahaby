@@ -90,6 +90,43 @@
             </div>
         </div>
     </section>
+     <section class="contact-section">
+    <h2>تواصل معنا</h2>
+    <form id="contactForm">
+      
+      <div class="form-group">
+        <label for="name">اسم ثلاثي</label>
+        <input type="text" id="name"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">بريد الالكتروني</label>
+        <input type="email" id="email"  required>
+      </div>
+
+      <div class="form-group phone-group">
+        <label for="phone">رقم هاتف</label>
+        <div class="phone-input">
+          <select id="countryCode">
+            <option value="+1">US +1</option>
+            <option value="+20" selected>EG +20</option>
+            <option value="+44">GB +44</option>
+            <option value="+91">IN +91</option>
+            <option value="+971">AE +971</option>
+          </select>
+          <input type="tel" id="phone"  required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">رسالتك</label>
+        <textarea id="message" rows="4" placeholder="اكتب هنا" required></textarea>
+      </div>
+
+      <button type="submit">ارسال</button>
+      <p id="responseMsg"></p>
+    </form>
+  </section>
 
     <section class="cta" id="download">
         <div class="cta-content">
@@ -127,5 +164,6 @@
         </div>
     </footer>
     <script src="/menu.js"></script>
+    <script src="/form.js"></script>
 </body>
 </html>
