@@ -90,12 +90,15 @@ body {
 
 /* Hero section */
 .hero {
-  min-height: 100vh;
+    aspect-ratio: 2 / 1; /* keeps 2:1 ratio */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 6rem 2rem 2rem;
-  background: linear-gradient(rgba(212, 175, 55, 0.1), rgba(248, 247, 244, 0.9));
+  background-image: url("/app.jpg");
+  background-position: center center ;
+  background-size: cover;
+  background-repeat:no-repeat ;
 }
 
 .hero-content {
@@ -517,6 +520,42 @@ button:hover {
 }
 
 /* Responsive design */
+
+/* Desktop XL (≥1200px) */
+@media (min-width: 1200px) {
+  .hero-section {
+    height: 570px; /* matches ~2:1 */
+  }
+}
+
+/* Laptops (992px–1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-section {
+    height: 480px;
+  }
+}
+
+/* Tablets (768px–991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .hero-section {
+    height: 360px;
+  }
+}
+
+/* Mobile L (576px–767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .hero-section {
+    height: 270px;
+  }
+}
+
+/* Mobile S (<576px) */
+@media (max-width: 575px) {
+  .hero-section {
+    height: 220px; /* slightly smaller for compact screens */
+  }
+}
+
 @media (max-width: 768px) {
 
   .nav.active{
@@ -544,9 +583,16 @@ button:hover {
     flex-direction: column;
     text-align: center;
   }
+  .hero-content p {
+    margin-bottom: 16px;
+  }
 
   .hero h1 {
     font-size: 2.5rem;
+  }
+  .button{
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
   }
   
   .nav-links {
