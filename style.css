@@ -297,6 +297,144 @@ button:hover {
   font-weight: 500;
 }
 
+/* preview section */
+
+        .preview-section {
+            width: 100%;
+            max-width: 1100px;
+            padding: 3rem;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.03);
+            border-radius: 1.5rem; /* Rounded corners */
+            border: 1px solid #e5e7eb;
+            margin: 0 auto;
+            margin-bottom: 40px; 
+        }
+
+        /* --- Flex Layout for Desktop --- */
+        .section-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            
+        }
+
+        /* --- Text Content Area --- */
+        .content-area {
+            max-width: 800px;
+            text-align: center; /* Default text alignment for RTL */
+
+        }
+
+        .content-area h2 {
+            font-size: 2.25rem; /* 3xl */
+            font-weight: 900; /* Extrabold */
+            color: #1f2937; /* Gray 900 */
+            margin-bottom: 1rem;
+            line-height: 1.25;
+        }
+
+        .content-area p {
+            font-size: 1.125rem; /* lg */
+            color: #4b5563; /* Gray 600 */
+            margin-bottom: 0;
+        }
+
+        /* --- Responsive Details List --- */
+        .details-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            padding-right: 0;
+            list-style: none; /* Remove default list styles */
+            margin-bottom: 24px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem; /* sm */
+            color: #6b7280; /* Gray 500 */
+        }
+
+        .detail-item svg {
+            height: 1.25rem;
+            width: 1.25rem;
+            color: #4f46e5; /* Indigo 600 */
+            margin-left: 0.5rem; /* Space after the icon in RTL */
+            flex-shrink: 0;
+        }
+
+        /* --- Button Area --- */
+        .button-area {
+            flex-shrink: 0;
+            width: 224px; /* md:w-56 */
+        }
+
+        /* --- Button Style --- */
+        .preview-button {
+            display: inline-flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border: none;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 0.75rem; /* Rounded xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            background-color: var(--dark);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .preview-button:hover {
+            transform: scale(1.03);
+            
+        }
+        
+        
+        .preview-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.5); /* Focus ring */
+        }
+
+        .preview-button svg {
+            height: 1.25rem;
+            width: 1.25rem;
+            margin-left: 0.75rem; /* Space after icon in RTL */
+            margin-right: -0.25rem; /* Slight negative margin for overlap */
+        }
+
+        /* --- Mobile Responsiveness (Screen size < 768px) --- */
+        @media (max-width: 768px) {
+            .preview-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .section-layout {
+                flex-direction: column; /* Stack vertically on mobile */
+                gap: 2rem;
+            }
+            
+            .content-area h2 {
+                font-size: 1.875rem; /* 3xl on mobile */
+            }
+
+            .details-list {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .button-area {
+                width: 100%; /* Full width button on mobile */
+            }
+        }
+
 /* CTA section */
 .cta {
   padding: 4rem 2rem;
@@ -353,6 +491,9 @@ button:hover {
 .footer-logo {
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  align-content: center;
+  gap: 10px;
 }
 
 .footer-links a {
@@ -360,7 +501,9 @@ button:hover {
   text-decoration: none;
   margin-right: 2rem;
 }
-
+.logo-img-footer{
+  height: 50px;
+}
 .social-links a {
   color: white;
   font-size: 1.5rem;
