@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دهبى - منصة تداول الذهب الرقمية</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="logo">دهبى</div>
-            <div class="nav-links">
-                <a href="#features">المميزات</a>
-                <a href="#services">خدماتنا</a>
-                <a href="#download">حمل التطبيق</a>
-                <a href="#contact" class="nav-cta">ابدأ الآن</a>
+        <div class="nav-parent">
+            <nav class="nav" id="nav">
+                
+                <div class="logo"><img class="logo-img" src="/white-logo.png" alt="">دهبى</div>
+                <div class="nav-links" id="nav-links">
+                    <a href="#features">المميزات</a>
+                    <a href="#services">خدماتنا</a>
+                    <a href="#download">حمل التطبيق</a>
+                    <a href="#contact" class="nav-cta">ابدأ الآن</a>
+                </div>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <img id="menu-icon" src="/menu.png" alt="">
             </div>
-        </nav>
+        </div>
     </header>
 
     <section class="hero">
@@ -119,5 +126,6 @@
             <p>جميع الحقوق محفوظة &copy; 2024 دهبى</p>
         </div>
     </footer>
+    <script src="/menu.js"></script>
 </body>
 </html>
